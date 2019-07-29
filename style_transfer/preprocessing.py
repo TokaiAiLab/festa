@@ -11,7 +11,7 @@ img_size = 512 if torch.cuda.is_available() else 128
 
 
 loader = transforms.Compose([
-    transforms.Resize(img_size),
+    transforms.Resize((img_size, img_size)),
     transforms.ToTensor()
 ])
 
@@ -43,6 +43,8 @@ def fetch_img(url: str) -> None:
 
     with open("images/{}".format(file_name), "wb") as f:
         f.write(img.content)
+
+    print("File name: {}.".format(file_name))
 
 
 def picture_list():
