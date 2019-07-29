@@ -79,7 +79,7 @@ def get_style_model_and_losses(
             name = "conv_{}".format(i)
         elif isinstance(layer, nn.ReLU):
             name = "relu_{}".format(i)
-            layer = nn.ReLU(inplace=True)
+            layer = nn.ReLU(inplace=False)
         elif isinstance(layer, nn.MaxPool2d):
             name = "pool_{}".format(i)
         elif isinstance(layer, nn.BatchNorm2d):

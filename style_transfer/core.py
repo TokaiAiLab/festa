@@ -30,7 +30,6 @@ def run_style_transfer(
     running = [0]
     while running[0] <= num_steps:
         def closure():
-            # correct the values of updated input image
             input_img.data.clamp_(0, 1)
 
             optimizer.zero_grad()
