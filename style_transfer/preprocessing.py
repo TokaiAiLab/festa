@@ -5,8 +5,7 @@ from PIL import Image
 from torchvision import transforms
 import matplotlib.pyplot as plt
 
-from .models import device
-
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 img_size = 512 if torch.cuda.is_available() else 128
 
 
