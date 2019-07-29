@@ -56,8 +56,13 @@ def get_style_model_and_losses(
         norm_std,
         style_img,
         content_img,
-        content_layer=content_layers_default,
-        style_layers=style_layers_default):
+        content_layer=None,
+        style_layers=None):
+
+    if style_layers is None:
+        style_layers = style_layers_default
+    if content_layer is None:
+        content_layer = content_layers_default
 
     vgg = copy.deepcopy(vgg)
     normalization = Normalization(norm_mean, norm_std).to(device)
