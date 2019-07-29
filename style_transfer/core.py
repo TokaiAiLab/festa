@@ -50,7 +50,7 @@ def run_style_transfer(
             loss.backward()
 
             running[0] += 1
-            if run[0] % 50 == 0:
+            if running[0] % 50 == 0:
                 print("run {}:".format(run))
                 print('Style Loss : {:4f} Content Loss: {:4f}'.format(
                     style_score.item(), content_score.item()))
@@ -66,13 +66,14 @@ def run_style_transfer(
 
 
 def run(content_img, style_img):
+    input_img = content_img.clone()
     output = run_style_transfer(
         models.cnn,
-        models.cnn_normalization,
+        models.cnn_normalization_mean,
         models.cnn_normalization_std,
         content_img,
         style_img,
-        content_img.clone()
+        input_img
     )
 
     plt.figure(figsize=(15, 10), dpi=200)
