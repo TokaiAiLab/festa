@@ -27,8 +27,8 @@ def run_style_transfer(
 
     optimizer = get_input_optimizer(input_img)
 
-    run = [0]
-    while run[0] <= num_steps:
+    running = [0]
+    while running[0] <= num_steps:
         def closure():
             # correct the values of updated input image
             input_img.data.clamp_(0, 1)
@@ -49,7 +49,7 @@ def run_style_transfer(
             loss = style_score + content_score
             loss.backward()
 
-            run[0] += 1
+            running[0] += 1
             if run[0] % 50 == 0:
                 print("run {}:".format(run))
                 print('Style Loss : {:4f} Content Loss: {:4f}'.format(
