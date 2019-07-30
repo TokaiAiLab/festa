@@ -15,5 +15,6 @@ Docker Image is available via building from Dockerfile in this repository.
 
 ```shell script
 git clone https://github.com/KawashimaHirotaka/festa.git
+cd festa/
 docker build -t festa .
 ```
