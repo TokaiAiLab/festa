@@ -50,7 +50,7 @@ def run_style_transfer(
 
             running[0] += 1
             if running[0] % 50 == 0:
-                print("run {}:".format(run))
+                print("run {}:".format(running))
                 print('Style Loss : {:4f} Content Loss: {:4f}'.format(
                     style_score.item(), content_score.item()))
                 print()
