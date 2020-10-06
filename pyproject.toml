@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "festa"
+version = "0.2.0"
+description = ""
+authors = ["Hirotaka Kawashima <khirotaka@vivaldi.net>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+matplotlib = "^3.3.2"
+requests = "^2.24.0"
+opencv-python = "^4.4.0"
+torch = "^1.6.0"
+torchvision = "^0.7.0"
+scipy = "^1.5.2"
+scikit-image = "^0.17.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
