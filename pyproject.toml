@@ -2,7 +2,7 @@
 name = "festa"
 version = "0.2.0"
 description = ""
-authors = ["Hirotaka Kawashima <khirotaka@vivaldi.net>"]
+authors = ["Hirotaka Kawashima <example@example.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
